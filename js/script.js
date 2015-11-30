@@ -21,7 +21,15 @@ function loadData() {
 
     $greeting.text('So, you want to live at ' + address + '?');
     $body.append(node);
-    
+
+    // NYT API KEY : ​db298d73aecc9deae1d9f634b9a63f5c:2:73620129
+    var ntyurl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?fq='+cityStr+'&api-key=db298d73aecc9deae1d9f634b9a63f5c:2:73620129'
+    $.getJSON( ntyurl, function( data ) {
+      $.each( data.response.docs, function( key, val ) {
+        $('#nytimes-articles').append( "<li id='" + key + "'>" + val.lead_paragraph + "</li>" );
+      });
+    });
+
     return false;
 };
 
