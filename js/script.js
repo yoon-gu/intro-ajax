@@ -14,7 +14,7 @@ function loadData() {
     // load streetview
     
     // YOUR CODE GOES HERE!
-    $body.append('<img class="bgimg" src="http://placehold.it/350x150">');
+    $body.append('<img class="bgimg" src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.720032,-73.988354">');
     
     return false;
 };
