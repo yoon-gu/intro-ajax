@@ -12,9 +12,10 @@ function loadData() {
     $nytElem.text("");
 
     // load streetview
-
+    
     // YOUR CODE GOES HERE!
-
+    $body.append('<img class="bgimg" src="http://placehold.it/350x150">');
+    
     return false;
 };
 
